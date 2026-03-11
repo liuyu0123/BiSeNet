@@ -23,4 +23,11 @@ python tools/train_amp_water.py --config configs/bisenet_water.py
 
 
 #模型测试
-python tools/demo.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path ./test_water.jpg
+python tools/demo_water.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_1_0000000000.jpg
+python tools/demo_water.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_2_0000000800.jpg
+python tools/demo_water.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_2_0000001550.jpg
+
+#模型测试（mask）
+python tools/demo_water_mask.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_1_0000000000.jpg
+python tools/demo_water_mask.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_2_0000000800.jpg
+python tools/demo_water_mask.py --config configs/bisenet_water.py --weight-path ./res/model_final.pth --img-path datasets\img\H05_2_0000001550.jpg

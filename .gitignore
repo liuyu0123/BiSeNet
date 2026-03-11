@@ -127,3 +127,5 @@ log*txt
 tvm/
 
 datasets/water_seg
+datasets/img
+res*.jpg
