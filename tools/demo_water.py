@@ -60,4 +60,4 @@ out = out.argmax(dim=1)
 # visualize
 out = out.squeeze().detach().cpu().numpy()
 pred = palette[out]
-cv2.imwrite('./res.jpg', pred)
+cv2.imwrite('./result/res.jpg', pred)
