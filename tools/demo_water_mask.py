@@ -101,13 +101,13 @@ final_image = final_image.astype(np.uint8)
 file_name = args.img_path.split('\\')[-1].split('.')[0]
 
 # === 保存 1: 叠加效果图 (红色) ===
-output_visual = f"./res_visual_{file_name}.jpg"
+output_visual = f"./result/res_visual_{file_name}.jpg"
 cv2.imwrite(output_visual, final_image)
 print(f"✅ 叠加效果已保存至: {output_visual}")
 
 # === 保存 2: 纯 Mask 图 (黑白) ===
 # 将 0/1 映射为 0/255 以便查看
 mask_255 = (pred_mask_smoothed * 255).astype(np.uint8)
-output_mask = f"./res_mask_only_{file_name}.jpg"
+output_mask = f"./result/res_mask_only_{file_name}.jpg"
 cv2.imwrite(output_mask, mask_255)
 print(f"✅ 纯 Mask 已保存至: {output_mask}")
